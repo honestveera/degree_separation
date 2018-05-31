@@ -2,7 +2,13 @@
 
 With cinema going global these days, every one of the [A-Z]ollywoods are now connected. Use the wealth of data available at [Moviebuff](http://www.moviebuff.com) to see how. 
 
-# RUBY program that behaves the following way:
+### Liraries Used:
+1.OptionParse - Ruby Command Line Interface
+2.json - Parse Json Data. 
+3.net/http - Http Request handling [Example: https://data.moviebuff.com/amitabh-bachchan] 
+4.zlib - Compress and Decompress Data
+
+### RUBY program that behaves the following way:
 ```
 $ ruby small_degree_separation.rb --help
      Usage: small_degree_separation.rb [options]
