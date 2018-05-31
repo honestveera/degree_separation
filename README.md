@@ -1,2 +1,31 @@
-# degree_separation
-With cinema going global these days, every one of the [A-Z]ollywoods are now connected. Use the wealth of data available at Moviebuff to see how.  Write a Go program that behaves the following way:  $ degrees amitabh-bachchan robert-de-niro  Degrees of Separation: 3  1. Movie: The Great Gatsby Supporting Actor: Amitabh Bachchan Actor: Leonardo DiCaprio  2. Movie: The Wolf of Wall Street Actor: Leonardo DiCaprio Director: Martin Scorsese  3. Movie: Taxi Driver Director: Martin Scorsese Actor: Robert De Niro Your solution should use the Moviebuff data available to figure out the smallest degree of separation between the two people.  All the inputs should be Moviebuff URLs for their respective people: For Amitabh Bachchan, his page is on http://www.moviebuff.com/amitabh-bachchan and his Moviebuff URL is amitabh-bachchan.  Please do not attempt to scrape the Moviebuff website - All the data is available on an S3 bucket in an easy to parse JSON format here: https://data.moviebuff.com/&lt;moviebuff_url>  To solve the example above, your solution would fetch at least the following:
+# Degree Separation
+
+With cinema going global these days, every one of the [A-Z]ollywoods are now connected. Use the wealth of data available at [Moviebuff](http://www.moviebuff.com) to see how. 
+
+# RUBY program that behaves the following way:
+```
+$ ruby small_degree_separation.rb --help
+     Usage: small_degree_separation.rb [options]
+    -s, --source                     Person 1 Name
+    -d, --destination                Person 2 Name
+    -h, --help                       Display this screen
+    
+$ ruby small_degree_separation.rb -s amitabh-bachchan -d obert-de-niro  
+
+Total no.of.request sent: 1
+Total time taken (in ms) : 1
+
+Degrees of Separation: 3
+
+Movie: The Great Gatsby
+Supporting Actor: Amitabh Bachchan
+Actor: Leonardo DiCaprio
+
+Movie: The Wolf of Wall Street
+Actor: Leonardo DiCaprio
+Director: Martin Scorsese
+
+Movie: Taxi Driver
+Director: Martin Scorsese
+Actor: Robert De Niro
+```
